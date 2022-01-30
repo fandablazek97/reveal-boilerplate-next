@@ -1,0 +1,231 @@
+.lib-scroll-reveal {
+  --reveal-duration: 900ms;
+  --reveal-easing: ease;
+  --reveal-offset: 4rem;
+  --reveal-delay: 0ms;
+
+  transform-origin: 50% 50%;
+  transition: opacity var(--reveal-duration) var(--reveal-easing)
+      var(--reveal-delay),
+    transform var(--reveal-duration) var(--reveal-easing) var(--reveal-delay);
+}
+
+@layer utilities {
+  /* Delay */
+  .reveal-delay-0 {
+    --reveal-delay: 0ms;
+  }
+
+  .reveal-delay-100 {
+    --reveal-delay: 100ms;
+  }
+
+  .reveal-delay-200 {
+    --reveal-delay: 200ms;
+  }
+
+  .reveal-delay-300 {
+    --reveal-delay: 300ms;
+  }
+
+  .reveal-delay-400 {
+    --reveal-delay: 400ms;
+  }
+
+  .reveal-delay-500 {
+    --reveal-delay: 500ms;
+  }
+
+  .reveal-delay-600 {
+    --reveal-delay: 600ms;
+  }
+
+  .reveal-delay-700 {
+    --reveal-delay: 700ms;
+  }
+
+  .reveal-delay-800 {
+    --reveal-delay: 800ms;
+  }
+
+  .reveal-delay-900 {
+    --reveal-delay: 900ms;
+  }
+
+  .reveal-delay-1000 {
+    --reveal-delay: 1000ms;
+  }
+
+  .reveal-delay-1100 {
+    --reveal-delay: 1100ms;
+  }
+
+  .reveal-delay-1200 {
+    --reveal-delay: 1200ms;
+  }
+
+  .reveal-delay-1300 {
+    --reveal-delay: 1300ms;
+  }
+
+  .reveal-delay-1400 {
+    --reveal-delay: 1400ms;
+  }
+
+  .reveal-delay-1500 {
+    --reveal-delay: 1500ms;
+  }
+
+  /* Duration */
+  .reveal-duration-100 {
+    --reveal-duration: 100ms;
+  }
+
+  .reveal-duration-200 {
+    --reveal-duration: 200ms;
+  }
+
+  .reveal-duration-300 {
+    --reveal-duration: 300ms;
+  }
+
+  .reveal-duration-400 {
+    --reveal-duration: 400ms;
+  }
+
+  .reveal-duration-500 {
+    --reveal-duration: 500ms;
+  }
+
+  .reveal-duration-600 {
+    --reveal-duration: 600ms;
+  }
+
+  .reveal-duration-700 {
+    --reveal-duration: 700ms;
+  }
+
+  .reveal-duration-800 {
+    --reveal-duration: 800ms;
+  }
+
+  .reveal-duration-900 {
+    --reveal-duration: 900ms;
+  }
+
+  .reveal-duration-1000 {
+    --reveal-duration: 1000ms;
+  }
+
+  .reveal-duration-1100 {
+    --reveal-duration: 1100ms;
+  }
+
+  .reveal-duration-1200 {
+    --reveal-duration: 1200ms;
+  }
+
+  .reveal-duration-1300 {
+    --reveal-duration: 1300ms;
+  }
+
+  .reveal-duration-1400 {
+    --reveal-duration: 1400ms;
+  }
+
+  .reveal-duration-1500 {
+    --reveal-duration: 1500ms;
+  }
+
+  .reveal-duration-2000 {
+    --reveal-duration: 2000ms;
+  }
+
+  .reveal-duration-2500 {
+    --reveal-duration: 2500ms;
+  }
+
+  .reveal-duration-3000 {
+    --reveal-duration: 3000ms;
+  }
+}
+
+/**** Animations ****/
+
+/* Fade In */
+.reveal-fade-in-hidden {
+  opacity: 0;
+}
+.reveal-fade-in-visible {
+  opacity: 1;
+}
+
+/* Slide Up */
+.reveal-slide-up-hidden {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-offset), 0);
+}
+.reveal-slide-up-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Slide Down */
+.reveal-slide-down-hidden {
+  opacity: 0;
+  transform: translate3d(0, calc(var(--reveal-offset) * -1), 0);
+}
+.reveal-slide-down-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Slide Left */
+.reveal-slide-left-hidden {
+  opacity: 0;
+  transform: translate3d(var(--reveal-offset), 0, 0);
+}
+.reveal-slide-left-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Slide Right */
+.reveal-slide-right-hidden {
+  opacity: 0;
+  transform: translate3d(calc(var(--reveal-offset) * -1), 0, 0);
+}
+.reveal-slide-right-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Zoom in */
+.reveal-zoom-in-hidden {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.reveal-zoom-in-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Zoom out */
+.reveal-zoom-out-hidden {
+  opacity: 0;
+  transform: scale(1.5);
+}
+.reveal-zoom-out-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Zoom out */
+.reveal-flip-hidden {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+.reveal-flip-visible {
+  opacity: 1;
+  transform: none;
+}

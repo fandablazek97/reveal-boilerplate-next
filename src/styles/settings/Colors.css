@@ -1,0 +1,47 @@
+:root {
+  /* Main colors */
+  --color-primary: 353, 86%, 54%;
+  --color-secondary: 258, 86%, 34%;
+
+  --color-muted: var(--color-gray-500);
+  --color-default: var(--color-gray-700);
+  --color-rich: var(--color-gray-950);
+
+  --color-body: var(--color-white);
+  --color-body-100: var(--color-gray-50);
+  --color-body-200: var(--color-gray-100);
+  --color-body-300: var(--color-gray-200);
+
+  --color-a11y: var(--color-primary);
+  /* --color-a11y: 224, 76%, 48%; */
+
+  /* Grays */
+  --color-white: 0, 0%, 100%;
+  --color-gray-50: 210, 20%, 98%;
+  --color-gray-100: 220, 14%, 95%;
+  --color-gray-200: 220, 13%, 91%;
+  --color-gray-300: 216, 12%, 84%;
+  --color-gray-400: 218, 11%, 65%;
+  --color-gray-500: 220, 10%, 50%;
+  --color-gray-600: 215, 14%, 34%;
+  --color-gray-700: 220, 19%, 27%;
+  --color-gray-800: 228, 24%, 17%;
+  --color-gray-900: 235, 27%, 12%;
+  --color-gray-950: 240, 27%, 9%;
+  --color-black: 0, 0%, 0%;
+}
+
+/* Dark theme */
+.dark {
+  --color-muted: var(--color-gray-500);
+  --color-default: var(--color-gray-300);
+  --color-rich: var(--color-white);
+
+  --color-body: var(--color-gray-950);
+  --color-body-100: var(--color-gray-900);
+  --color-body-200: var(--color-gray-800);
+  --color-body-300: var(--color-gray-700);
+
+  --color-a11y: var(--color-primary);
+  /* --color-a11y: 213, 94%, 68%; */
+}

@@ -1,0 +1,19 @@
+.ui-group {
+  display: flex;
+
+  & > *:not(:first-child),
+  & > *:not(:first-child) > input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  & > *:not(:last-child),
+  & > *:not(:last-child) > input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & > *:not(:first-child) {
+    border-left: 0;
+  }
+}

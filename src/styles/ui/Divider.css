@@ -1,0 +1,37 @@
+hr,
+.ui-divider {
+  --divider-thickness: 1px;
+  --divider-my: 1.25rem;
+  --divider-bg: currentColor;
+  --divider-opacity: 0.3;
+
+  display: block;
+  border: none;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not([class*="w-"]) {
+    width: 100%;
+  }
+
+  &:not([class*="h-"]) {
+    height: var(--divider-thickness);
+  }
+
+  &:not([class*="bg-"]) {
+    background-color: var(--divider-bg);
+  }
+
+  &:not([class*="opacity-"]) {
+    opacity: var(--divider-opacity);
+  }
+
+  &:not([class*="mt-"]), &:not([[class*="my-"]]) {
+    margin-top: var(--divider-my);
+  }
+
+  &:not([class*="mb-"]), &:not([[class*="my-"]]) {
+    margin-bottom: var(--divider-my);
+  }
+}

@@ -1,0 +1,80 @@
+/* Base setup for UI */
+
+/* Turn off smooth scroll behaviour */
+:root {
+  scroll-behavior: auto;
+}
+
+/* Adding global responsive font-sizing 
+ * -> takes effect on all elements (influence size of rem unit) */
+html {
+  font-size: 85%;
+
+  @media screen(xs) {
+    font-size: 90%;
+  }
+
+  @media screen(md) {
+    font-size: 95%;
+  }
+
+  @media screen(lg) {
+    font-size: 100%;
+  }
+}
+
+/* 
+ * 1. Add font-display: swap for performance
+ * 2. Add base typography to whole body (takes effect on all elements)
+ * 3. Set default background-color */
+body {
+  font-display: swap;
+  font-family: var(--font-sans);
+  font-size: var(--base-font-size);
+  color: hsl(var(--color-default));
+  font-weight: var(--base-font-weight);
+  line-height: var(--base-line-height);
+  font-style: normal;
+  background-color: hsl(var(--color-body-100));
+}
+
+/* Colored selection based on primary color */
+::selection {
+  color: white;
+  background-color: hsla(var(--color-primary), 1);
+}
+
+/* make sure section tag is fullwidth & inner content not overflowing */
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Style a bit default link */
+a {
+  cursor: pointer;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+/* Add basic styles to all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  line-height: 1.15;
+}
+
+/* Style default divider */
+hr {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.3;
+  margin: 1.25rem auto;
+}

@@ -1,0 +1,20 @@
+.ui-tagline {
+  --tagline-font-family: var(--font-sans);
+  --tagline-color: var(--color-primary);
+  --tagline-font-size: 1rem;
+  --tagline-font-weight: 600;
+  --tagline-text-transform: uppercase;
+  --tagline-letter-spacing: 0.1em;
+  --tagline-mb: 1em;
+
+  display: block;
+  color: hsl(var(--tagline-color));
+  font-size: var(--tagline-font-size); /* Výchozí velikost md */
+  font-family: var(--tagline-font-family);
+  font-weight: var(--tagline-font-weight);
+  text-transform: var(--tagline-text-transform);
+  letter-spacing: var(--tagline-letter-spacing);
+  line-height: 1.2;
+  font-style: normal;
+  margin-bottom: var(--tagline-mb);
+}

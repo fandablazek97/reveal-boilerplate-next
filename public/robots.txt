@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://domena.cz
+
+# Sitemaps
+Sitemap: https://domena.cz/sitemap.xml
+Sitemap: https://domena.cz/sitemap-0.xml

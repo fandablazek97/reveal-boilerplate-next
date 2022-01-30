@@ -1,0 +1,47 @@
+/* Responzivní velikosti nadpisů jsou poskládané z výchozího design systému tailwindu
+-> https://tailwindcss.com/docs/font-size */
+
+.ui-heading {
+  --heading-font-family: var(--font-sans);
+  --heading-color: var(--color-rich);
+  --heading-font-weight: 700;
+  --heading-text-transform: none;
+  --heading-mb: 0.67em;
+
+  display: block;
+  color: hsl(var(--heading-color));
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  line-height: 1.2;
+  text-transform: var(--heading-text-transform);
+  font-style: normal;
+  margin-bottom: var(--heading-mb);
+
+  font-size: 1.5rem; /* Výchozí velikost md */
+
+  &[data-heading] {
+    &[data-heading="xl"] {
+      font-size: 2.25rem; /* TW text 4xl - 36px */
+
+      @media screen(md) {
+        font-size: 3rem; /* TW text 5xl - 48px */
+      }
+    }
+
+    &[data-heading="lg"] {
+      font-size: 1.875rem; /* TW text 3xl - 30px */
+
+      @media screen(md) {
+        font-size: 2.25rem; /* TW text 4xl - 36px */
+      }
+    }
+
+    &[data-heading="md"] {
+      font-size: 1.5rem; /* TW text 2xl - 24px */
+    }
+
+    &[data-heading="sm"] {
+      font-size: 1.125rem; /* TW text lg - 18px */
+    }
+  }
+}

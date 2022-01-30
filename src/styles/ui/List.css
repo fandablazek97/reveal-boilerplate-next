@@ -1,0 +1,90 @@
+/* Vyžaduje naimportovaný iconfont do frameworku -> `libraries/Iconfont.css` */
+.ui-list {
+  --list-ml: 0;
+  --list-item-my: 0.6em;
+  --list-icon: var(--icon-check);
+  --list-icon-color: var(--color-primary);
+  --list-icon-size: 1.1em;
+
+  line-height: var(--base-line-height);
+  list-style: none;
+
+  &:not([class*="ml"]) {
+    margin-left: var(--list-ml);
+  }
+
+  & li {
+    margin-top: var(--list-item-my);
+    margin-bottom: var(--list-item-my);
+    margin-left: 2em;
+    text-indent: -1em;
+
+    &::before {
+      @extend iconfont;
+      content: var(--list-icon);
+      font-size: var(--list-icon-size);
+      color: hsl(var(--list-icon-color));
+
+      display: inline-block;
+      width: var(--list-icon-size);
+    }
+  }
+
+  /* Center list - opravený indent a margin */
+  &[class="text-center"] {
+    --list-ml: 0;
+
+    & li {
+      margin-left: 0;
+      text-indent: 0;
+    }
+  }
+
+  /* Varianty barev pro ikony */
+  &[data-list-color="current"] li::before {
+    color: currentColor;
+  }
+
+  &[data-list-color="primary"] {
+    --list-icon-color: var(--color-primary);
+  }
+
+  &[data-list-color="secondary"] {
+    --list-icon-color: var(--color-secondary);
+  }
+
+  /* Varianty ikon */
+  &[data-list-icon="check"] {
+    --list-icon: var(--icon-check);
+  }
+
+  &[data-list-icon="plus"] {
+    --list-icon: var(--icon-plus);
+  }
+
+  &[data-list-icon="close"] {
+    --list-icon: var(--icon-close);
+  }
+
+  &[data-list-icon="link"] {
+    --list-icon: var(--icon-link);
+  }
+
+  &[data-list-icon="heart-solid"],
+  &[data-list-icon="heart"] {
+    --list-icon: var(--icon-heart-solid);
+  }
+
+  &[data-list-icon="heart-outline"] {
+    --list-icon: var(--icon-heart-outline);
+  }
+
+  &[data-list-icon="star-solid"],
+  &[data-list-icon="star"] {
+    --list-icon: var(--icon-star-solid);
+  }
+
+  &[data-list-icon="star-outline"] {
+    --list-icon: var(--icon-star-outline);
+  }
+}

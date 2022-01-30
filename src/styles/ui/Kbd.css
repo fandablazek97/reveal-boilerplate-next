@@ -1,0 +1,38 @@
+kbd,
+.ui-kbd {
+  --kbd-py: 0.2em;
+  --kbd-px: 0.6em;
+  --kbd-font-family: var(--font-mono);
+  --kbd-font-size: inherit;
+  --kbd-color: var(--color-rich);
+  --kbd-bg: var(--color-body-200);
+  --kbd-border-color: var(--color-body-300);
+  --kbd-border-opacity: 0.5;
+  --kbd-border-width: 0.09375em;
+  --kbd-border-bottom-width: 0.1875em;
+  --kbd-border-radius: var(--radius);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  padding: var(--kbd-py) var(--kbd-px);
+
+  color: hsl(var(--kbd-color));
+  font-size: var(--kbd-font-size);
+  font-family: var(--kbd-font-family);
+  line-height: 1;
+  font-weight: 300;
+  text-transform: capitalize;
+
+  background-color: hsl(var(--kbd-bg));
+  border: var(--kbd-border-width) solid
+    hsla(var(--kbd-border-color), var(--kbd-border-opacity));
+  border-bottom-width: var(--kbd-border-bottom-width);
+  border-radius: var(--kbd-border-radius);
+
+  transition: var(--transition-color), var(--transition-background);
+}

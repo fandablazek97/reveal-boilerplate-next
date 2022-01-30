@@ -1,0 +1,37 @@
+/* Extrakce komponentů tailwindu
+ * Dokumentace: https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply */
+
+@layer utilities {
+  /* Třídy pro konzistentní nastavení focus stavů u komponent (ne všude vypadá hlavní výchozí outline dobře `Core/A11y.css`) */
+  .a11y-primary {
+    @apply !outline-none ring-primary ring-5 ring-offset-0 ring-opacity-50;
+  }
+
+  .a11y-secondary {
+    @apply !outline-none ring-secondary ring-5 ring-offset-0 ring-opacity-50;
+  }
+
+  .a11y-success {
+    @apply !outline-none ring-success-600 ring-5 ring-offset-0 ring-opacity-50;
+  }
+
+  .a11y-error {
+    @apply !outline-none ring-error-600 ring-5 ring-offset-0 ring-opacity-50;
+  }
+
+  .a11y-warning {
+    @apply !outline-none ring-warning-600 ring-5 ring-offset-0 ring-opacity-50;
+  }
+
+  .a11y-info {
+    @apply !outline-none ring-info-600 ring-5 ring-offset-0 ring-opacity-50;
+  }
+
+  .a11y-white {
+    @apply !outline-none ring-white ring-5 ring-offset-0 ring-opacity-50;
+  }
+
+  .a11y-black {
+    @apply !outline-none ring-black ring-5 ring-offset-0 ring-opacity-50;
+  }
+}

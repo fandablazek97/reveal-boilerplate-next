@@ -1,0 +1,36 @@
+code,
+.ui-code {
+  --code-py: 0.8em;
+  --code-px: 0.6em;
+  --code-font-family: var(--font-mono);
+  --code-font-size: 1em;
+  --code-font-weight: 300;
+  --code-color: inherit;
+  --code-border-radius: var(--radius);
+  --code-bg-opacity: 0.05;
+
+  display: inline;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  padding: var(--code-py) var(--code-px);
+
+  color: var(--code-color);
+  font-family: var(--code-font-family);
+  font-size: var(--code-font-size);
+  line-height: 1;
+  font-weight: var(--code-font-weight);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    border-radius: var(--code-border-radius);
+    opacity: var(--code-bg-opacity);
+  }
+}

@@ -1,0 +1,13 @@
+/* Theme change transition */
+body {
+  transition: background-color var(--duration) ease;
+}
+
+section,
+header,
+nav,
+footer,
+div,
+span {
+  transition: background-color var(--duration) ease;
+}

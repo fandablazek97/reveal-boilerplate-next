@@ -1,0 +1,25 @@
+mark,
+.ui-mark {
+  --mark-px: 0.5em;
+  --mark-color: var(--color-primary);
+  --mark-font-family: var(--font-mono);
+  --mark-font-size: 0.875em;
+  --mark-font-weight: 300;
+  --mark-before-after-char: "`";
+
+  display: inline;
+  padding-left: var(--mark-px);
+  padding-right: var(--mark-px);
+
+  font-family: var(--mark-font-family);
+  font-size: var(--mark-font-size);
+  font-weight: var(--mark-font-weight);
+  font-style: normal;
+  color: hsl(var(--mark-color));
+
+  &::before,
+  &::after {
+    content: var(--mark-before-after-char);
+    color: currentColor;
+  }
+}

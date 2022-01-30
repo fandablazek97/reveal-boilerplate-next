@@ -1,0 +1,18 @@
+.ui-wrapper {
+  --wrapper-base-width: 90%;
+  --wrapper: 75rem;
+  --wrapper-sm: 48rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: min(var(--wrapper-base-width), var(--wrapper));
+
+  &[data-wrapper="sm"] {
+    --wrapper: var(--wrapper-sm);
+  }
+
+  &[data-wrapper="lg"] {
+    width: var(--wrapper-base-width);
+  }
+}

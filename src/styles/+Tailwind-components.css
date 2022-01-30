@@ -1,0 +1,8 @@
+/* Extrakce komponentů tailwindu
+ * Dokumentace: https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply */
+
+/* @layer components {
+  .my-component {
+    @apply ...;
+  }
+} */

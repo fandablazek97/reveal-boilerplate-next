@@ -1,0 +1,76 @@
+.ui-progress {
+  --progress-height: 0.5rem;
+  --progress-bar-color: var(--color-primary);
+  --progress-bg: var(--color-body-200);
+  --progress-bg-opacity: 1;
+  --progress-border-radius: 100px;
+
+  appearance: none;
+
+  width: 100%;
+  height: var(--progress-height);
+  border: 0;
+  border-radius: var(--progress-border-radius);
+  background-color: hsla(var(--progress-bg), var(--progress-bg-opacity));
+  color: currentColor;
+
+  /* Bar */
+  &::-moz-progress-bar {
+    background-color: hsl(var(--progress-bar-color));
+    border-radius: var(--progress-border-radius);
+  }
+
+  &::-webkit-progress-value {
+    background-color: hsl(var(--progress-bar-color));
+    border-radius: var(--progress-border-radius);
+  }
+
+  &::-webkit-progress-bar {
+    background-color: transparent;
+  }
+
+  /* Indeterminate */
+  &[indeterminate="true"] {
+    background: linear-gradient(
+      to right,
+      hsla(var(--progress-bg), var(--progress-bg-opacity)) 0%,
+      hsla(var(--progress-bg), var(--progress-bg-opacity)) 35%,
+      hsl(var(--progress-bar-color)) 50%,
+      hsla(var(--progress-bg), var(--progress-bg-opacity)) 65%,
+      hsla(var(--progress-bg), var(--progress-bg-opacity)) 100%
+    );
+    background-repeat: repeat-x;
+    background-position: -100%;
+    background-size: 200% 100%;
+
+    animation: 1s linear 0s forwards infinite runningIndeterminate;
+
+    &::-moz-progress-bar,
+    &::-webkit-progress-value {
+      background-color: transparent;
+    }
+  }
+
+  /* Sizes */
+  &[data-progress="sm"] {
+    --progress-height: 0.25rem;
+  }
+
+  &[data-progress="lg"] {
+    --progress-height: 0.75rem;
+  }
+
+  &[data-progress="xl"] {
+    --progress-height: 1.15rem;
+  }
+}
+
+@keyframes runningIndeterminate {
+  from {
+    background-position: 100% 100%;
+  }
+
+  to {
+    background-position: -100% 100%;
+  }
+}
